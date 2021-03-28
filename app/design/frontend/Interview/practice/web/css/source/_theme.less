@@ -316,9 +316,22 @@
 	border-radius: @val;
 }
 
-.product-item {
-    .tocart {
-         .border-radius(8px);
-     }
- }
+
  
+ & when (@media-common = true) {
+    .product-item {
+        .tocart {
+            .border-radius(8px);
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .content-heading {
+        &::before {
+            content: '';
+            background: 
+            -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(25%, #ff00ff), color-stop(100%, #cecece));
+            display: none;
+        }
+    }
+}

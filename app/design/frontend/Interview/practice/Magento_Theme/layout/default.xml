@@ -6,6 +6,11 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+    <!-- common for theme -->
+   <css src="Magento_Theme::css/owl.carousel.min.css"/>
+   <css src="Magento_Theme::css/owl.theme.default.css"/>
+</head>
     <body>
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
@@ -30,7 +35,7 @@
         <!-- move right of container -->
         <move element="logo" destination="header-wrapper" after="-" /> 
         <move element="top.search" destination="header-wrapper" before="-" />
-        <move element="minicart" destination="header-wrapper" before="-" />
+        <!-- <move element="minicart" destination="header-wrapper" before="-" /> -->
         <!-- <move element="minicart-wrapper" destination="header-wrapper" before="top.search" /> -->
         <move element="copyright" destination="before.body.end"/>  
     </body>
